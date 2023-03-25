@@ -110,6 +110,7 @@ Status add_contact(Contacts *contact)
     }
     else
         return e_exit;
+    return e_none;
 }
 
 int email_pattern_check(char *email)

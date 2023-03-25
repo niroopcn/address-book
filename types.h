@@ -15,7 +15,8 @@ typedef enum
 {
     e_success,
     e_failure,
-    e_exit
+    e_exit,
+    e_none
 } Status;
 
 typedef enum

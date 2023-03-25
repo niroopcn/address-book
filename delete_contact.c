@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 #include "types.h"
 #include "common.h"
 
@@ -58,12 +59,12 @@ Status delete_contact(Contacts *contact)
 
             //remove 1 contact
             fgets(buffer, 100, contact->fptr);
-            
+
             while (1)
             {
                 if(fgets(buffer, 100, contact->fptr) == NULL)
                 break;
-                
+
                 fputs(buffer, contact->temp_fptr);
             }
 

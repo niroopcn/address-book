@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 #include "types.h"
 #include "common.h"
 
@@ -72,14 +73,14 @@ reenter_data:
 
     if (contact->edit_choice == 1)
     {
-        int ret = search_in_file(contact, new_data, e_name);
+        int ret1 = search_in_file(contact, new_data, e_name);
 
         // close and open again to reset positions
         fclose(contact->fptr);
         if (open_address_file(contact) == e_failure)
             return e_exit;
 
-        if (ret == e_failure)
+        if (ret1 == e_failure)
         {
             printf("----------------------------------------------------------------\nContact with name %s is already present, please re-enter\n----------------------------------------------------------------\n", new_data);
             goto reenter_data;
